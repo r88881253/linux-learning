@@ -11,30 +11,32 @@
 
 #### sed -n
 1. 搜尋 sed -n '/pattern/=' filename，-n 選項只列印行號，不列印檔案內容
-    <pre>
-   // 使用grep -n 的效果
-   [MacBook-Pro:...]$ grep -n running sed_example.txt 
-   11:8. "The pain of running relieves the pain of living." – Jacqueline Simon Gunn
-   13:9. "If you run, you are a runner. It doesn’t matter how fast or how far. It doesn’t matter if today is your first day or if you’ve been running for twenty years. There is no test to pass, no license to earn, no membership card to get. You just run." – John Bingham
+    ```console
+    // 使用grep -n 的效果
+    [MacBook-Pro:...]$ grep -n running sed_example.txt 
+    11:8. "The pain of running relieves the pain of living." – Jacqueline Simon Gunn
+    13:9. "If you run, you are a runner. It doesn’t matter how fast or how far. It doesn’t matter if today is your first day or if you’ve been running for twenty years. There is no test to pass, no license to earn, no membership card to get. You just run." – John Bingham
    
-   // 使用sed -n 的效果
+    // 使用sed -n 的效果
    MacBook-Pro-7:linux-learning kiwiliu$ sed -n '/running/=' test.txt 
-   11
-   13
+    11
+    13
    
-   // 「-n」 有使用取代的須加「p」才會顯示行數
-   [MacBook-Pro:...]$ sed -n 's/running/------/p' test.txt 
-   8. "The pain of ------ relieves the pain of living." – Jacqueline Simon Gunn
-   9. "If you run, you are a runner. It doesn’t matter how fast or how far. It doesn’t matter if today is your first day or if you’ve been ------ for twenty years. There is no test to pass, no license to earn, no membership card to get. You just run." – John Bingham
+    // 「-n」 有使用取代的須加「p」才會顯示行數
+    [MacBook-Pro:...]$ sed -n 's/running/------/p' test.txt 
+    8. "The pain of ------ relieves the pain of living." – Jacqueline Simon Gunn
+    9. "If you run, you are a runner. It doesn’t matter how fast or how far. It doesn’t matter if today is your first day or if you’ve been ------ for twenty years. There is no test to pass, no license to earn, no membership card to get. You just run." – John Bingham
    
-   // 「-n」不加「p」就不會有output
-   [MacBook-Pro:...]$ sed -n 's/running/------/' sed_example.txt 
-    </pre>
+    // 「-n」不加「p」就不會有output
+    [MacBook-Pro:...]$ sed -n 's/running/------/' sed_example.txt 
+    ```
 
 #### 常用操作
 
 1. 查看幾行到幾行
-    <pre>sed -n '1,5p' sed_example.txt</pre>
+    ```console
+    sed -n '1,5p' sed_example.txt
+    ```
     
 
 
@@ -54,7 +56,11 @@ G=文件末行
 範例：
 
 1. 每2秒
-    <pre>watch free -m</pre>
+    ```console
+    watch free -m
+    ```
     
 2. 改為每10秒執行script.sh
-    <pre>watch -n 10 script.sh</pre>
+    ```console
+    watch -n 10 script.sh
+    ```
