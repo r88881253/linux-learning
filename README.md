@@ -18,7 +18,7 @@
     13:9. "If you run, you are a runner. It doesn’t matter how fast or how far. It doesn’t matter if today is your first day or if you’ve been running for twenty years. There is no test to pass, no license to earn, no membership card to get. You just run." – John Bingham
    
     // 使用sed -n 的效果
-   MacBook-Pro-7:linux-learning kiwiliu$ sed -n '/running/=' test.txt 
+   [MacBook-Pro:...]$ sed -n '/running/=' test.txt 
     11
     13
    
