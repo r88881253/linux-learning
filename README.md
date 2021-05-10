@@ -4,6 +4,7 @@
 預設為每2秒執行一次
 範例：
 1. 每2秒
-`watch free -m`
+    <pre>watch free -m</pre>
+    
 2. 改為每10秒執行script.sh
-`watch -n 10 script.sh`
+    <pre>watch -n 10 script.sh</pre>
