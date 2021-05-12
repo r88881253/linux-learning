@@ -50,6 +50,36 @@ gg=文件首行
 G=文件末行  
 </pre>
 
+### find - 檔案搜尋
+
+- `-type`：
+   - `f`: 一般檔案
+   - `d`: 目錄
+- `-name`: 檔名
+- `-user`: 檔案擁有者
+- `時間參數`: 
+   - `-mtime n`: 檔案的最後修改時間（modification time），單位為天
+   - `-atime n`:檔案的最後存取時間（access time），單位為天
+   - `-cmin n`: 檔案狀態相關資訊最後修改的時間（status time），單位為分鐘
+
+
+常用操作
+
+1. 查詢某個時間內檔案
+   - n天內修改的(-ctime)
+      ```
+      # -c 是change的意思
+      # 查詢1天內改過的file，並列出相關資訊
+      find . -type f -ctime -1 | xargs ls –l
+      # 查詢30分鐘內內改過的檔案，並列出相關資訊
+      find . -type f -cmin -1 | xargs ls –l
+      ```
+   - n天內訪問過的(-atime) 
+      ```
+      # 查詢1天內存取過的檔案
+      find . -type f -atime -1 | xargs ls -l
+      ```
+
 ### watch - 重複執行執行linux指令
 
 預設為每2秒執行一次
